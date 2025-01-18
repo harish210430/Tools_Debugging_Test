@@ -57,3 +57,46 @@ console.timeEnd("creatingData");
 console.table(users);
 console.table(users, ['name']);
 console.table(users, ["age"]);
+
+
+// Using console Exercise:
+
+/*
+    Write all the console method's (present in console object) name and what it does with an example.
+*/
+// 1. console.info - it gives us Normal message/Info.
+console.info("Hi Info");
+// 2. console.warn - it shows the message with warning.
+console.warn("Hey! Warning");
+// 3. console.error - it show the error message.
+console.error("Hi Error");
+// 4. console.log - it log/shows the message in console.
+console.log("Hi console");
+// 5. console.group - it grouped the multiple console.log given below.
+console.group("Address");
+console.log("Village and post Umariya");
+console.log("Tehsil Sarila");
+console.log("Block Gohand");
+console.groupEnd();
+// 6. console.time - it calculate the time taken by the loop to end it.
+console.time("Required Time:");
+var data = [];
+for(let i = 0; i <= 100; i++) {
+    data.push(i);
+}
+console.timeEnd("Required Time:");
+// 7. console.table - it showa the data/Info in table form.
+let fruit1 = "Apple";
+let fruit2 = "Banana";
+console.table(fruit1);
+/* 
+    Use console.group for grouping multiple console.log 
+*/
+
+/* 
+    Use console.time to find the time taken by the execution of the code below.
+*/
+
+for (let i = 0; i < 1000000000; i++) {
+  //
+}
