@@ -86,17 +86,91 @@ for(let i = 0; i <= 100; i++) {
 }
 console.timeEnd("Required Time:");
 // 7. console.table - it showa the data/Info in table form.
-let fruit1 = "Apple";
-let fruit2 = "Banana";
-console.table(fruit1);
+let fruits = ["Apple", "Banana", "Cherry", "Grapes", "Litchi"];
+console.table(fruits);
+
+
 /* 
     Use console.group for grouping multiple console.log 
 */
-
+console.group("Grouped Elmnts: ");
+console.log("Element1");
+console.log("Element2");
+console.log("Element3");
+console.groupEnd("Grouped Elmnts");
 /* 
     Use console.time to find the time taken by the execution of the code below.
 */
-
-for (let i = 0; i < 1000000000; i++) {
-  //
+console.time("TimeTakensBy:");
+for (let i = 0; i < 100000; i++) {
+    i;
 }
+console.timeEnd("TimeTakensBy:");
+
+/*  
+    Use console.log with the %c placeholder to change the font size to 30px, color to tomato and background to black.
+*/
+console.log("%cIntroducing console Properties", "font-size: 30px; color: tomato; background-color: black;");
+
+/* 
+    Use console.dir to display the object representation of a function.
+*/
+
+/* 
+    Use console.table to display the variable named people given below in table form.
+*/
+let people = [
+  {
+    name: 'Eddard Stark',
+    description:
+      'Lord of Winterfell - Warden of the North - Hand of the King - Married to Catelyn (Tully) Stark',
+  },
+  {
+    name: 'Benjen Stark',
+    description: "Brother of Eddard Stark - First ranger of the Night's Watch",
+  },
+  {
+    name: 'Robb Stark',
+    description: 'Son of Eddard and Catelyn Stark - Direwolf: Grey Wind',
+  },
+  {
+    name: 'Sansa Stark',
+    description: 'Daughter of Eddard and Catelyn Stark - Direwolf: Lady',
+  },
+];
+console.table(people);
+
+/* 
+    Use console.count to display how many times the loop given below will run.
+*/
+for (let i = 0; i < 100; i++) {
+    console.count(i);
+}
+
+/* 
+    Learn about console.trace and use it on a function.
+*/
+// console.trace : it will trace the func/Msg, ki kaise and kitne steps ke bad o/p Aaya.
+// it will gives initial invokation of a perticular piece of code.(ki code kaha se originate ua hai).
+
+function calculate(num1, num2, optr) {
+    function add() {
+        return num1 + num2; 
+    }
+    function sub() {
+       return num1 - num2;
+    }
+    function devision() {
+        return num1 / num2;
+    }
+
+    switch(optr) {
+        case "+": return add()
+        case "-": return sub()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        case "/": return devision()
+        default: "Enter wrong Operation";
+    }
+};
+let final = calculate(12,3, "+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ");
+console.log(final);
+
